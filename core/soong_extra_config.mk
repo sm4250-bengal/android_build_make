@@ -78,7 +78,7 @@ $(call add_json_str, VendorImageFileSystemType, $(BOARD_VENDORIMAGE_FILE_SYSTEM_
 
 $(call add_json_list, BuildVersionTags, $(BUILD_VERSION_TAGS))
 
-$(call add_json_bool, ProductNotDebuggableInUserdebug, $(PRODUCT_NOT_DEBUGGABLE_IN_USERDEBUG))
+$(call add_json_bool, ProductNotDebuggableInUserdebug, $(filter true,$(PRODUCT_NOT_DEBUGGABLE_IN_USERDEBUG)))
 
 $(call add_json_bool, UsesProductImage, $(filter true,$(BOARD_USES_PRODUCTIMAGE)))
 
